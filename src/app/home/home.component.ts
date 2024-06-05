@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
   public license: string | undefined;
   public date: any[] | undefined;
   public ex: string = `const match: any = new database().getByProperties( { key : "value" },'name');`;
+  public ex2: string = `const match: any = brain.getByProperties( { key: "value" }, 'name' );`;
 
   ngOnInit(): void {
     this.info().subscribe((ele) => {
