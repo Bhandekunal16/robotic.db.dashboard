@@ -16,7 +16,7 @@ import { Observable, catchError, throwError } from 'rxjs';
 })
 export class AboutComponent implements OnInit {
   constructor(private http: HttpClient) {}
-  public data: any[] | undefined;
+  public data: any[] = [];
 
   ngOnInit(): void {
     this.info().subscribe((ele) => {
@@ -25,7 +25,6 @@ export class AboutComponent implements OnInit {
       for (let key in obj) {
         arr.push({ key: key, value: obj[key] });
       }
-
       this.data = arr;
     });
   }
