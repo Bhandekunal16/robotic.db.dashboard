@@ -27,7 +27,6 @@ export class HomeComponent implements OnInit {
 
  ngOnInit(): void {
     this.info().subscribe((ele) => {
-      console.log(ele);
       this.name = ele.data.name;
       this.createdOn = ele.data.time.created;
       this.modifiedOn = ele.data.time.modified;
