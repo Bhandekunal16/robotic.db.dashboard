@@ -1,1 +1,11 @@
-<p>about works!</p>
+<div class="Package-information">
+  <div *ngFor="let item of data">
+    <p>{{ item.key }}</p>
+    <p>{{ item.value.name }}</p>
+    <p>Depended on robotic.js : {{ item.value.dependencies["robotic.js"] }}</p>
+    <p>
+      DevDependencies on types/node :
+      {{ item.value.devDependencies["@types/node"] }}
+    </p>
+  </div>
+</div>
