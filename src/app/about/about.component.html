@@ -1,5 +1,5 @@
-<div class="Package-information">
-  <div *ngFor="let item of data">
+<div>
+  <div *ngFor="let item of data" class="Package-information">
     <p>{{ item.key }}</p>
     <p>{{ item.value.name }}</p>
     <p>Depended on robotic.js : {{ item.value.dependencies["robotic.js"] }}</p>
@@ -7,5 +7,9 @@
       DevDependencies on types/node :
       {{ item.value.devDependencies["@types/node"] }}
     </p>
+    <p>Node Version {{ item.value._nodeVersion }}</p>
+    <p>Npm version {{ item.value._npmVersion }}</p>
+    <p>file Count {{ item.value.dist.fileCount }}</p>
+    <p>unpacked Size {{ item.value.dist.unpackedSize / 1024 }} KB</p>
   </div>
 </div>
