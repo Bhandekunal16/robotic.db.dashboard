@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
 * {
+  background-color: #000;
+  color: #ffff;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  font-family: inherit;
 }
 
 @import "primeng/resources/themes/lara-light-blue/theme.css";
