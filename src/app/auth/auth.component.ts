@@ -18,6 +18,7 @@ export class AuthComponent {
       {
         label: 'Home',
         icon: 'pi pi-home',
+        command: () => this.initial(),
       },
       {
         label: 'About',
@@ -33,5 +34,9 @@ export class AuthComponent {
 
   contact(): void {
     this.router.navigate(['/contact']);
+  }
+
+  initial(): void {
+    this.router.navigate(['/home']);
   }
 }
