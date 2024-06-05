@@ -9,6 +9,7 @@ export const routes: Routes = [
     component: AuthComponent,
     path: '',
     children: [
+      { component: HomeComponent, path: '' },
       { component: ContactComponent, path: 'contact' },
       { component: HomeComponent, path: 'home' },
       { component: AboutComponent, path: 'about' },
