@@ -25,7 +25,6 @@ export class AboutComponent implements OnInit {
       for (let key in obj) {
         arr.push({ key: key, value: obj[key] });
       }
-      console.log(arr);
 
       this.data = arr;
     });
