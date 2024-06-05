@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
   public license: string | undefined;
   public date: any[] | undefined;
 
-  ngOnInit(): void {
+ ngOnInit(): void {
     this.info().subscribe((ele) => {
       console.log(ele);
       this.name = ele.data.name;
@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
       this.description = ele.data.description;
       this.maintainers = ele.data.maintainers[0].name;
       this.license = ele.data.license;
-
+ 
       const obj = ele.data.time;
       const arr = [];
       for (let key in obj) {
