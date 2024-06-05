@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenubarModule } from 'primeng/menubar';
 
 @Component({
@@ -10,6 +11,7 @@ import { MenubarModule } from 'primeng/menubar';
 })
 export class AuthComponent {
   items: any[] | undefined;
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.items = [
@@ -24,7 +26,12 @@ export class AuthComponent {
       {
         label: 'Contact',
         icon: 'pi pi-envelope',
+        command: () => this.contact(),
       },
     ];
+  }
+
+  contact(): void {
+    this.router.navigate(['/contact']);
   }
 }
