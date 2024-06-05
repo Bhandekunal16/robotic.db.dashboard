@@ -10,8 +10,9 @@
   <p>license : {{ license }}</p>
 </div>
 
-<div class="Package-information">
+<h1>Uploaded on</h1>
+<div class="Package-information-date">
   <div *ngFor="let item of date">
-    <p>{{ item.key }} : uploaded on {{ item.value }}</p>
+    <p>{{ item.key }} : {{ item.value }}</p>
   </div>
 </div>
