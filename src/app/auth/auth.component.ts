@@ -22,7 +22,7 @@ export class AuthComponent {
       },
       {
         label: 'About',
-        icon: 'pi pi-star',
+        icon: 'pi pi-user',
       },
       {
         label: 'Contact',
