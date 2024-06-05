@@ -24,8 +24,9 @@ export class HomeComponent implements OnInit {
   public maintainers: string | undefined;
   public license: string | undefined;
   public date: any[] | undefined;
+  public ex: string = `const match: any = new database().getByProperties( { key : "value" },'name');`;
 
- ngOnInit(): void {
+  ngOnInit(): void {
     this.info().subscribe((ele) => {
       this.name = ele.data.name;
       this.createdOn = ele.data.time.created;
@@ -34,7 +35,7 @@ export class HomeComponent implements OnInit {
       this.description = ele.data.description;
       this.maintainers = ele.data.maintainers[0].name;
       this.license = ele.data.license;
- 
+
       const obj = ele.data.time;
       const arr = [];
       for (let key in obj) {
