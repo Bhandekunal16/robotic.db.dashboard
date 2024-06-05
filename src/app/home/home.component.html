@@ -9,3 +9,9 @@
   <p>maintainers : {{ maintainers }}</p>
   <p>license : {{ license }}</p>
 </div>
+
+<div class="Package-information">
+  <div *ngFor="let item of date">
+    <p>{{ item.key }} : uploaded on {{ item.value }}</p>
+  </div>
+</div>

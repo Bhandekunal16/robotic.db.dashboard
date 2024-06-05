@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import {
   HttpClient,
   HttpClientModule,
@@ -9,7 +10,7 @@ import { Observable, catchError, throwError } from 'rxjs';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HttpClientModule],
+  imports: [HttpClientModule, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -22,6 +23,7 @@ export class HomeComponent implements OnInit {
   public description: string | undefined;
   public maintainers: string | undefined;
   public license: string | undefined;
+  public date: any[] | undefined;
 
   ngOnInit(): void {
     this.info().subscribe((ele) => {
@@ -33,6 +35,13 @@ export class HomeComponent implements OnInit {
       this.description = ele.data.description;
       this.maintainers = ele.data.maintainers[0].name;
       this.license = ele.data.license;
+
+      const obj = ele.data.time;
+      const arr = [];
+      for (let key in obj) {
+        arr.push({ key: key, value: obj[key] });
+      }
+      this.date = arr;
     });
   }
 
