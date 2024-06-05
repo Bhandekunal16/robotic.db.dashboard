@@ -23,6 +23,7 @@ export class AuthComponent {
       {
         label: 'About',
         icon: 'pi pi-user',
+        command: () => this.about(),
       },
       {
         label: 'Contact',
