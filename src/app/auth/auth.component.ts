@@ -39,4 +39,8 @@ export class AuthComponent {
   initial(): void {
     this.router.navigate(['/home']);
   }
+
+  about(): void {
+    this.router.navigate(['/about']);
+  }
 }
