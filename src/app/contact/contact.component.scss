@@ -63,7 +63,7 @@
 }
 
 .honeycomb-container-high {
-  background-color: #000;
+  background-color: #f5f5f5;
 }
 
 .honeycomb-container {
@@ -77,7 +77,7 @@
 .honeycomb {
   width: 10vw;
   height: 10vh;
-  background-color: #fff;
+  background-color: gray;
   margin: 5px;
   position: relative;
   animation: glowing 2s infinite;
@@ -91,12 +91,12 @@
 
 @keyframes glowing {
   0% {
-    box-shadow: 0 0 5px #fff;
+    box-shadow: 0 0 5px gray;
   }
   50% {
-    box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #fff;
+    box-shadow: 0 0 20px gray, 0 0 40px gray, 0 0 60px gray;
   }
   100% {
-    box-shadow: 0 0 5px #fff;
+    box-shadow: 0 0 5px gray;
   }
 }

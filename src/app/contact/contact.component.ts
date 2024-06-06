@@ -75,6 +75,16 @@ export class ContactComponent {
     });
   }
 
+  redirectToExternalURL() {
+    const externalURL = 'https://github.com/Bhandekunal16/jsonDb';
+    window.location.href = externalURL;
+  }
+
+  redirectToExternalURL2() {
+    const externalURL = 'https://github.com/Bhandekunal16/jsonDb';
+    window.location.href = externalURL;
+  }
+
   email(body: any): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',

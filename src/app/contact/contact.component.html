@@ -29,7 +29,15 @@
 
 <div class="honeycomb-container-high">
   <div class="honeycomb-container">
-    <p-button icon="pi pi-github" severity="secondary" class="honeycomb" />
+    <div class="honeycomb">
+      <p-button
+        icon="pi pi-github"
+        severity="secondary"
+        (click)="redirectToExternalURL()"
+      />
+    </div>
+    <div></div>
+
     <p-button icon="pi pi-shop" severity="secondary" class="honeycomb" />
   </div>
 </div>
