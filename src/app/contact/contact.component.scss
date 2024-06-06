@@ -61,3 +61,42 @@
   right: 0;
   z-index: 999;
 }
+
+.honeycomb-container-high {
+  background-color: #000;
+}
+
+.honeycomb-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.honeycomb {
+  width: 10vw;
+  height: 10vh;
+  background-color: #fff;
+  margin: 5px;
+  position: relative;
+  animation: glowing 2s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 1px;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #fff;
+  }
+  50% {
+    box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #fff;
+  }
+  100% {
+    box-shadow: 0 0 5px #fff;
+  }
+}
