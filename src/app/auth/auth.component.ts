@@ -52,11 +52,25 @@ export class AuthComponent {
 
     if (randomColor == 'white') {
       document.body.style.backgroundColor = randomColor;
-      document.body.style.color = 'white';
+      document.body.style.color = 'black';
+
       this.flag = true;
     } else {
       document.body.style.backgroundColor = randomColor;
-      document.body.style.color = 'black';
+      document.body.style.color = 'white';
+      const elements = document.getElementsByClassName('Package-information');
+      for (let i = 0; i < elements.length; i++) {
+        const element = elements[i] as HTMLElement;
+        element.style.setProperty('border', '1px dotted #fff');
+      }
+      const elements2 = document.getElementsByClassName(
+        'contact-container-form'
+      );
+      for (let i = 0; i < elements2.length; i++) {
+        const element2 = elements2[i] as HTMLElement;
+        element2.style.setProperty('border', '1px dotted #fff');
+      }
+
       this.flag = false;
     }
   }
