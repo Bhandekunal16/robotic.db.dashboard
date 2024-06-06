@@ -17,8 +17,8 @@ import { Observable, catchError, throwError } from 'rxjs';
 export class HomeComponent implements OnInit {
   constructor(private http: HttpClient) {}
   public name: string | undefined;
-  public createdOn: string | undefined;
-  public modifiedOn: string | undefined;
+  public createdOn: string | undefined | Date | number;
+  public modifiedOn: string | undefined | Date | number;
   public author: string | undefined;
   public description: string | undefined;
   public maintainers: string | undefined;
@@ -30,8 +30,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.info().subscribe((ele) => {
       this.name = ele.data.name?.toUpperCase();
-      this.createdOn = ele.data.time.created;
-      this.modifiedOn = ele.data.time.modified;
+      this.createdOn = new Date(ele.data.time.created).toDateString();
+      this.modifiedOn = new Date(ele.data.time.modified).toDateString();
       this.author = ele.data.author.name;
       this.description = ele.data.description;
       this.maintainers = ele.data.maintainers[0].name;
@@ -44,6 +44,10 @@ export class HomeComponent implements OnInit {
       }
       this.date = arr;
     });
+  }
+
+  formatDate(date: any): string {
+    return new Date(date).toDateString();
   }
 
   info(): Observable<any> {

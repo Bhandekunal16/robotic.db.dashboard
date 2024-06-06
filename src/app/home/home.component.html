@@ -18,7 +18,7 @@
 <h1>Uploaded on</h1>
 <div class="Package-information-date">
   <div *ngFor="let item of date">
-    <p>{{ item.key }} : {{ item.value }}</p>
+    <p>{{ item.key }} : {{ formatDate(item.value) }}</p>
   </div>
 </div>
 
