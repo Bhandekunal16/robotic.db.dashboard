@@ -1,5 +1,7 @@
 <div>
-  <div *ngIf="data.length == 0" class="loader"></div>
+  <div class="loader-container">
+    <div *ngIf="data.length == 0" class="loader"></div>
+  </div>
   <div *ngFor="let item of data" class="Package-information">
     <p>{{ item.key }}</p>
     <p>{{ item.value.name }}</p>
