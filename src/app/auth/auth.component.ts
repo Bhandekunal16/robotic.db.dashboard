@@ -11,7 +11,6 @@ import { MenubarModule } from 'primeng/menubar';
 })
 export class AuthComponent {
   items: any[] | undefined;
-  public flag: boolean = false;
   constructor(private router: Router) {}
 
   ngOnInit() {
@@ -44,34 +43,5 @@ export class AuthComponent {
 
   about(): void {
     this.router.navigate(['/about']);
-  }
-
-  changeColor(): void {
-    const colors = ['black', 'white'];
-    let randomColor = this.flag ? colors[0] : colors[1];
-
-    if (randomColor == 'white') {
-      document.body.style.backgroundColor = randomColor;
-      document.body.style.color = 'black';
-
-      this.flag = true;
-    } else {
-      document.body.style.backgroundColor = randomColor;
-      document.body.style.color = 'white';
-      const elements = document.getElementsByClassName('Package-information');
-      for (let i = 0; i < elements.length; i++) {
-        const element = elements[i] as HTMLElement;
-        element.style.setProperty('border', '1px dotted #fff');
-      }
-      const elements2 = document.getElementsByClassName(
-        'contact-container-form'
-      );
-      for (let i = 0; i < elements2.length; i++) {
-        const element2 = elements2[i] as HTMLElement;
-        element2.style.setProperty('border', '1px dotted #fff');
-      }
-
-      this.flag = false;
-    }
   }
 }
