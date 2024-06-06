@@ -1,5 +1,5 @@
 <div>
-  <div class="loader-container">
+  <div class="loader-container" *ngIf="data.length == 0">
     <div *ngIf="data.length == 0" class="loader"></div>
   </div>
   <div *ngFor="let item of data" class="Package-information">
