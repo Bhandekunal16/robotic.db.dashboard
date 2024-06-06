@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.info().subscribe((ele) => {
-      this.name = ele.data.name;
+      this.name = ele.data.name?.toUpperCase();
       this.createdOn = ele.data.time.created;
       this.modifiedOn = ele.data.time.modified;
       this.author = ele.data.author.name;
