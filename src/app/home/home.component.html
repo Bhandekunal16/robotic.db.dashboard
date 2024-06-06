@@ -1,6 +1,7 @@
 <h1>{{ name }}</h1>
 
 <div class="Package-information">
+  <div *ngIf="date.length == 0" class="loader"></div>
   <p>Package Information</p>
   <p>Created on : {{ createdOn }}</p>
   <p>Modified on : {{ modifiedOn }}</p>
@@ -8,6 +9,10 @@
   <p>description : {{ description }}</p>
   <p>maintainers : {{ maintainers }}</p>
   <p>license : {{ license }}</p>
+</div>
+
+<div class="loader-container" *ngIf="date.length == 0">
+  <div *ngIf="date.length == 0" class="loader"></div>
 </div>
 
 <h1>Uploaded on</h1>

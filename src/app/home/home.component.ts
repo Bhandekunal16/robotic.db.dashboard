@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
   public description: string | undefined;
   public maintainers: string | undefined;
   public license: string | undefined;
-  public date: any[] | undefined;
+  public date: any[] = [];
   public ex: string = `const match: any = new database().getByProperties( { key : "value" },'name');`;
   public ex2: string = `const match: any = brain.getByProperties( { key: "value" }, 'name' );`;
 
