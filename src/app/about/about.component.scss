@@ -11,6 +11,12 @@
   margin-top: 1%;
 }
 
+.Package-information:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-7px);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
 .loader {
   border: 16px solid #f3f3f3;
   border-top: 16px solid #34db5e;
